@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <!-- FONTAWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -15,18 +16,31 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- CSS style.css-->
   <link rel="stylesheet" href="css/style.css">
-  <title>ToDoolean</title>
+  <title>To Doolean</title>
 </head>
 <body>
 
   <div class="wrapper">
-    <h1>TO DO List</h1>
-    <div class="wrap-header">
-      <input id="input-new-element" type="text" name="" value="" placeholder="Inserisci un nuovo elemento">
+    <h1>Todoolean</h1><span></span>
+    <!-- lista TO DO -->
+    <ul id="to-do-list"></ul>
+    <!-- /lista TO DO -->
+
+
+    <div class="wrap-footer">
+      <input id="input-new-element" type="text" name="" value="" placeholder="Inserisci un nuovo elemento" autocomplete="off">
       <i class="fas fa-external-link-alt add-new"></i>
     </div>
 
-    <ul id="to-do-list"></ul>
+
+    <div class="edit_panel">
+      <h4>Vuoi modificare questo elemento?</h4>
+      <input id="input_edit" type="text" name="" value="" autocomplete="off">
+      <div class="wrap_btn">
+        <button class="btn btn-modifica" type="button" name="button">Modifica</button>
+        <button class="btn btn-annulla" type="button" name="button">Annulla</button>
+      </div>
+    </div>
   </div>
 
   <!-- TEMPLATE -->
@@ -34,7 +48,7 @@
     <li id="{{id}}" class="{{bck-color}}">
       <i class="fas fa-trash-alt delete"></i>
       <i class="fas fa-pencil-alt modifica"></i>
-      {{text}}</li>
+      <span id="text-work">{{text}}</span></li>
   </script>
   <!-- /TEMPLATE -->
 

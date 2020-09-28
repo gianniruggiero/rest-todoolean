@@ -6,30 +6,45 @@
 
 /* MIX */
 
+h1 {
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  text-align: center;
+}
+
 .color1 {
   background-color: white;
 }
 
 .color2 {
   background-color: lightyellow;
+  /* background-color: rgba(255, 0, 0, 0.5); */
 }
 
 body {
-  background-color: #efefef;
+  /* background-color: #efefef; */
   font-family: 'Roboto', sans-serif;
 }
 
 .wrapper {
+  position: relative;
   margin: 20px auto;
   width: 500px;
   height: calc(100vh - 40px);
   background-color: white;
   padding: 30px;
   border-radius: 10px;
+  border: 1px solid grey;
   box-shadow: 2px 2px 40px darkgrey;
+  background-image: linear-gradient(rgba(255,255,255,1), rgba(220,220,220,1));
+
 }
 
-.wrap-header{
+.wrap-footer{
+  position: absolute;
+  bottom: 30px;
+  width: calc(100% - 60px);
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -39,6 +54,11 @@ body {
   font-size: 18px;
   margin-left: 5px;
   text-align: right;
+  position: absolute;
+  right: 6px;
+  bottom: 8px;
+  /* color: #f400a1; */
+  color: green;
 }
 
 #input-new-element {
@@ -59,6 +79,8 @@ body {
   list-style: none;
   background-color: white;
   overflow: auto;
+  max-height: calc(100% - 120px);
+  border: 1px solid lightgrey;
 }
 
 #to-do-list li {
@@ -67,11 +89,27 @@ body {
   border-bottom: 1px solid lightgrey;
 }
 
+#input-riga {
+  border: 1px solid transparent;
+  width: 365px;
+  height: 90%;
+  font-size: 16px;
+}
+
+#input-riga::placeholder {
+  color: black;
+  font-size: 16px;
+}
 /* #to-do-list li:hover {
   /* background-color: grey; */
 /* }  */
 
-.delete, .modifica {
+.delete {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.modifica {
   margin-right: 10px;
 }
 
@@ -84,5 +122,63 @@ body {
 }
 
 .modifica:hover {
-  color: blue;
+  color: green;
+}
+
+#to-do-list li:hover .delete {
+  color: red;
+}
+
+#to-do-list li:hover .modifica {
+  color: green;
+}
+
+
+.edit_panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  border-radius: 10px;
+  width: 450px;
+  height: 150px;
+  padding: 25px;
+  background-color: #efefef;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid grey;
+  box-shadow: 2px 2px 40px darkgrey;
+  display: none;
+
+}
+
+#input_edit {
+  margin: 10px 0px;
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  border: 1px solid black;
+  text-align: left;
+  padding-left: 5px;
+}
+
+.btn {
+  padding: 5px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  border-radius: 3px;
+  width: 80px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #efefef;
+}
+
+.active {
+  display: block;
 }
