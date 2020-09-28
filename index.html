@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- FONTAWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
   <!-- HANDLEBARS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
   <!-- jQuery -->
@@ -14,14 +19,24 @@
 </head>
 <body>
 
-  <h1>TO DO List</h1>
-  <ul id="to-do-list"></ul>
+  <div class="wrapper">
+    <h1>TO DO List</h1>
+    <div class="wrap-header">
+      <input id="input-new-element" type="text" name="" value="" placeholder="Inserisci un nuovo elemento">
+      <i class="fas fa-external-link-alt add-new"></i>
+    </div>
+
+    <ul id="to-do-list"></ul>
+  </div>
+
   <!-- TEMPLATE -->
   <script id="elm-template" type="text/x-handlebars-template">
-    <li id="{{id}}">{{text}} <span class="delete">X</span></li>
+    <li id="{{id}}" class="{{bck-color}}">
+      <i class="fas fa-trash-alt delete"></i>
+      <i class="fas fa-pencil-alt modifica"></i>
+      {{text}}</li>
   </script>
   <!-- /TEMPLATE -->
-
 
   <!-- JS -->
   <script src="js/main.js" charset="utf-8"></script>

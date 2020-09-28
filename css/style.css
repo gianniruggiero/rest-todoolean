@@ -4,11 +4,85 @@
   margin: 0;
 }
 
+/* MIX */
+
+.color1 {
+  background-color: white;
+}
+
+.color2 {
+  background-color: lightyellow;
+}
+
 body {
   background-color: #efefef;
-  margin: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+  margin: 20px auto;
+  width: 500px;
+  height: calc(100vh - 40px);
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 40px darkgrey;
+}
+
+.wrap-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.add-new {
+  font-size: 18px;
+  margin-left: 5px;
+  text-align: right;
+}
+
+#input-new-element {
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #efefef;
+}
+
+#input-new-element::placeholder {
+  font-size: 16px;
+  font-weight:300;
 }
 
 #to-do-list {
   margin-top: 20px;
+  list-style: none;
+  background-color: white;
+  overflow: auto;
+}
+
+#to-do-list li {
+  height: 28px;
+  line-height: 28px;
+  border-bottom: 1px solid lightgrey;
+}
+
+/* #to-do-list li:hover {
+  /* background-color: grey; */
+/* }  */
+
+.delete, .modifica {
+  margin-right: 10px;
+}
+
+.fas:hover {
+  cursor: pointer;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.modifica:hover {
+  color: blue;
 }
