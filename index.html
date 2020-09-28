@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- HANDLEBARS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- CSS style.css-->
+  <link rel="stylesheet" href="css/style.css">
+  <title>ToDoolean</title>
+</head>
+<body>
+
+  <h1>TO DO List</h1>
+  <ul id="to-do-list"></ul>
+  <!-- TEMPLATE -->
+  <script id="elm-template" type="text/x-handlebars-template">
+    <li id="{{id}}">{{text}} <span class="delete">X</span></li>
+  </script>
+  <!-- /TEMPLATE -->
+
+
+  <!-- JS -->
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
