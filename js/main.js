@@ -62,7 +62,7 @@ $(document).ready(function() {
       "method": "DELETE",
       "success": function(data) {
       // per cancellare subito dal DOM e da video l'elemento
-      elm.css("background", "red");
+      elm.css("background", "#f400a1");
       readList();
       },
       "error": function(err) {
